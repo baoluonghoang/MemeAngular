@@ -1,0 +1,259 @@
+<!-- <div class="main-list">
+  <div class="card-body" *ngFor="let myList of myLists">
+    <div class="card-title">
+      <h2>{{myList.title}}</h2>
+    </div>
+    <div class="card-img">
+      <img class="card-img-top" src="" alt="Card image cap">
+    </div>
+    <div class="card-info">
+      <p class="my-0"><span>Được đăng bởi</span>: {{myList.username_post}}</p>
+      <p class="my-0"><span>Ngày đăng</span>: {{myList.posted_date}}</p>
+      <p class="text-muted"><span>Trạng thái</span>: {{myList.status}}</p>
+    </div>
+    <div class="card-button">
+      <a class="up" routerLink="">
+        <img src="../../../assets/images/up.png" alt="up">
+      </a>
+      <a class="down" routerLink="">
+        <img src="../../../assets/images/down.png" alt="down">
+      </a>
+      <a class="comment" routerLink="">
+        <img src="../../../assets/images/comment.png" alt="comment">
+      </a>
+      <a class="more" routerLink="">
+        <img src="../../../assets/images//more.png" alt="more">
+      </a>
+    </div>
+  </div>
+</div> -->
+<main>
+  <article id="popular-news">
+    <div id="featured">
+      <h2>Bài đăng hot nhất</h2>
+      <section class="popular-news-carousel">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a routerLink="/detail-post"><img class="d-block w-100" src="../../../../../assets/images/carousel1.jpg" alt="First slide"></a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Maria ozawa giải nghệ phim sex Nhật Bản</h5>
+                <p>29/11/2020</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a routerLink="/detail-post"><img class="d-block w-100" src="../../../../../assets/images/carousel2.jpg" alt="Second slide"></a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Maria ozawa giải nghệ phim sex Nhật Bản.</h5>
+                <p>29/11/2020</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a routerLink="/detail-post"><img class="d-block w-100" src="../../../../../assets/images/carousel3.jpg" alt="Third slide"></a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Maria ozawa giải nghệ phim sex Nhật Bản.</h5>
+                <p>29/11/2020</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+    <div id="latest">
+      <h2>Nhiều lượt xem nhất</h2>
+      <section class="news">
+        <div class="news-container">
+          <a routerLink="/detail-post"><img src="../../../../../assets/images/carousel1.jpg"></a>
+          <p class="carousel-text">Maria ozawa giải nghệ phim sex Nhật Bản.</p>
+        </div>
+      </section>
+      <section class="news">
+        <div class="news-container">
+          <a routerLink="/detail-post"><img src="../../../../../assets/images/carousel2.jpg"></a>
+          <p class="carousel-text">Maria ozawa giải nghệ phim sex Nhật Bản.</p>
+        </div>
+      </section>
+    </div>
+    <div id="our-picks">
+      <h2>Bài đăng mới nhất</h2>
+      <section class="news">
+        <div class="news-container">
+          <a routerLink="/detail-post"><img src="../../../../../assets/images/carousel3.jpg"></a>
+          <p class="carousel-text">Maria ozawa giải nghệ phim sex Nhật Bản.</p>
+        </div>
+      </section>
+      <section class="news">
+        <div class="news-container">
+          <a routerLink="/detail-post"><img src="../../../../../assets/images/carousel1.jpg"></a>
+          <p class="carousel-text">Maria ozawa giải nghệ phim sex Nhật Bản.</p>
+        </div>
+      </section>
+    </div>
+  </article>
+  <section class="more-news">
+    <ul class="news-section">
+      <li class="world">
+        <div class="card-post">
+          <h2>Trò chơi hài hước</h2>
+          <a routerLink="/detail-post"><img src="../../../../../assets/images/world1.jpg" class="title-post"></a>
+          <p><span class="label-post">Được đăng bởi:</span> Hoàng Bảo</p>
+          <p></p>
+          <div class="card-button">
+            <a class="up" routerLink="">
+              <img src="../../../../../assets/images/up.png" alt="up">
+            </a>
+            <a class="down" routerLink="">
+              <img src="../../../../../assets/images/down.png" alt="down">
+            </a>
+            <a class="comment" routerLink="">
+              <img src="../../../../../assets/images/comment.png" alt="comment">
+            </a>
+            <a type="button" class="more" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+              <img src="../../../../../assets/images//more.png" alt="more">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          <div class="card-comment">
+            <textarea class="user-comment" name="comment" placeholder="Comment here..."></textarea>
+            <input type="submit" value="Enter" name="submit-comment" class="btn btn-dark">
+          </div>
+        </div>
+      </li>
+
+      <li class="world">
+        <div class="card-post">
+          <h2>Trò chơi hài hước</h2>
+          <a routerLink="/detail-post"><img src="../../../../../assets/images/world1.jpg" class="title-post"></a>
+          <p><span class="label-post">Được đăng bởi:</span> Hoàng Bảo</p>
+          <p></p>
+          <div class="card-button">
+            <a class="up" routerLink="">
+              <img src="../../../../../assets/images/up.png" alt="up">
+            </a>
+            <a class="down" routerLink="">
+              <img src="../../../../../assets/images/down.png" alt="down">
+            </a>
+            <a class="comment" routerLink="">
+              <img src="../../../../../assets/images/comment.png" alt="comment">
+            </a>
+            <a type="button" class="more" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+              <img src="../../../../../assets/images//more.png" alt="more">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          <div class="card-comment">
+            <textarea class="user-comment" name="comment" placeholder="Comment here..."></textarea>
+            <input type="submit" value="Enter" name="submit-comment" class="btn btn-dark">
+          </div>
+        </div>
+      </li>
+      <li class="world">
+        <div class="card-post">
+          <h2>Trò chơi hài hước</h2>
+          <a routerLink="/detail-post"><img src="../../../../../assets/images/world1.jpg" class="title-post"></a>
+          <p><span class="label-post">Được đăng bởi:</span> Hoàng Bảo</p>
+          <p></p>
+          <div class="card-button">
+            <a class="up" routerLink="">
+              <img src="../../../../../assets/images/up.png" alt="up">
+            </a>
+            <a class="down" routerLink="">
+              <img src="../../../../../assets/images/down.png" alt="down">
+            </a>
+            <a class="comment" routerLink="">
+              <img src="../../../../../assets/images/comment.png" alt="comment">
+            </a>
+            <a type="button" class="more" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+              <img src="../../../../../assets/images//more.png" alt="more">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          <div class="card-comment">
+            <textarea class="user-comment" name="comment" placeholder="Comment here..."></textarea>
+            <input type="submit" value="Enter" name="submit-comment" class="btn btn-dark">
+          </div>
+
+        </div>
+      </li>
+      <li class="world">
+        <div class="card-post">
+          <h2>Trò chơi hài hước</h2>
+          <a routerLink="/detail-post"><img src="../../../../../assets/images/world1.jpg" class="title-post"></a>
+          <p><span class="label-post">Được đăng bởi:</span> Hoàng Bảo</p>
+          <p></p>
+          <div class="card-button">
+            <a class="up" routerLink="">
+              <img src="../../../../../assets/images/up.png" alt="up">
+            </a>
+            <a class="down" routerLink="">
+              <img src="../../../../../assets/images/down.png" alt="down">
+            </a>
+            <a class="comment" routerLink="">
+              <img src="../../../../../assets/images/comment.png" alt="comment">
+            </a>
+            <a type="button" class="more" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+              <img src="../../../../../assets/images//more.png" alt="more">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          <div class="card-comment">
+            <textarea class="user-comment" name="comment" placeholder="Comment here..."></textarea>
+            <input type="submit" value="Enter" name="submit-comment" class="btn btn-dark">
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <aside>
+      <h4>Các thể loại nổi bật</h4>
+      <ul class="ul-recent">
+        <div class="recent-news">
+          <img src="../../../../../assets/images/article1.jpg">
+          <p>Bài đăng về cô giáo Ly</p>
+        </div>
+        <div class="recent-news">
+          <img src="../../../../../assets/images/article1.jpg">
+          <p>Bài đăng về cô giáo Ly</p>
+        </div>
+        <div class="recent-news">
+          <img src="../../../../../assets/images/article1.jpg">
+          <p>Bài đăng về cô giáo Ly</p>
+        </div>
+        <div class="recent-news">
+          <img src="../../../../../assets/images/article1.jpg">
+          <p>Bài đăng về cô giáo Ly</p>
+        </div>
+      </ul>
+    </aside>
+  </section>
+</main>

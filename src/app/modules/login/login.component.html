@@ -1,0 +1,31 @@
+<body>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">
+        Login Form
+      </div>
+    </div>
+    <div class="form-container">
+      <div class="form-inner">
+        <form action="#" id="login" [formGroup]="form">
+          <div class="field" for="username">
+            <input type="text" name="username" formControlName="username" placeholder="Username" required>
+          </div>
+          <div class="field" for="password">
+            <input type="password" name="password" formControlName="password" placeholder="Password" required>
+          </div>
+          <div class="pass-link">
+            <a routerLink="/forgot-password">Forgot password?</a>
+            <a routerLink="/">Return to home page</a>
+          </div>
+          <div class="field btn">
+            <button class="btn-login" (click)="login()">Login</button>
+          </div>
+          <div class="signup-link">
+            Not a member? <a routerLink="/register">Signup now</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MemeAngular"
+    }
+  },
+  "defaultProject": "MemeAngular",
+  "cli": {
+    "analytics": "eaa2300b-9226-4198-93ef-c973f584452f"
+  }
 }
