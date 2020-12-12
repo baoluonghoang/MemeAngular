@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ContentService } from 'src/app/services/content.service';
 
 @Component({
   selector: 'app-detail-post',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail-post.component.css']
 })
 export class DetailPostComponent implements OnInit {
-
-  constructor() { }
+  data: any;
+  constructor(
+    private route: ActivatedRoute,
+    private contentService: ContentService
+  ) { }
 
   ngOnInit(): void {
+    this.getListPost();
   }
 
+  getListPost() {
+    const id = this.route.snapshot.params['id'];
+    this.contentService.getPost(id).subscribe((data:any) => {
+      this.data = data.data;
+      console.log(data.data);
+    });
+  }
 }

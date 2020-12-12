@@ -1,62 +1,31 @@
-<!-- <div class="main-list">
-  <div class="card-body" *ngFor="let myList of myLists">
-    <div class="card-title">
-      <h2>{{myList.title}}</h2>
-    </div>
-    <div class="card-img">
-      <img class="card-img-top" src="" alt="Card image cap">
-    </div>
-    <div class="card-info">
-      <p class="my-0"><span>Được đăng bởi</span>: {{myList.username_post}}</p>
-      <p class="my-0"><span>Ngày đăng</span>: {{myList.posted_date}}</p>
-      <p class="text-muted"><span>Trạng thái</span>: {{myList.status}}</p>
-    </div>
-    <div class="card-button">
-      <a class="up" routerLink="">
-        <img src="../../../assets/images/up.png" alt="up">
-      </a>
-      <a class="down" routerLink="">
-        <img src="../../../assets/images/down.png" alt="down">
-      </a>
-      <a class="comment" routerLink="">
-        <img src="../../../assets/images/comment.png" alt="comment">
-      </a>
-      <a class="more" routerLink="">
-        <img src="../../../assets/images//more.png" alt="more">
-      </a>
-    </div>
-  </div>
-</div> -->
 <main>
   <article id="popular-news">
     <div id="featured">
       <h2>Bài đăng hot nhất</h2>
       <section class="popular-news-carousel">
         <div id="carousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <a routerLink="/detail-post"><img class="d-block w-100" src="../../../../../assets/images/carousel1.jpg" alt="First slide"></a>
+              <a routerLink="/detail-post"><img class="d-block w-100" src="../../../../../assets/images/carousel1.jpg"
+                  alt="First slide"></a>
               <div class="carousel-caption d-none d-md-block">
                 <h5>Maria ozawa giải nghệ phim sex Nhật Bản</h5>
                 <p>29/11/2020</p>
               </div>
             </div>
             <div class="carousel-item">
-              <a routerLink="/detail-post"><img class="d-block w-100" src="../../../../../assets/images/carousel2.jpg" alt="Second slide"></a>
+              <a routerLink="/detail-post"><img class="d-block w-100" src="../../../../../assets/images/carousel2.jpg"
+                  alt="Second slide"></a>
               <div class="carousel-caption d-none d-md-block">
-                <h5>Maria ozawa giải nghệ phim sex Nhật Bản.</h5>
+                <h5>Truyện hài tiếu lâm tự.</h5>
                 <p>29/11/2020</p>
               </div>
             </div>
             <div class="carousel-item">
-              <a routerLink="/detail-post"><img class="d-block w-100" src="../../../../../assets/images/carousel3.jpg" alt="Third slide"></a>
+              <a routerLink="/detail-post"><img class="d-block w-100" src="../../../../../assets/images/carousel3.jpg"
+                  alt="Third slide"></a>
               <div class="carousel-caption d-none d-md-block">
-                <h5>Maria ozawa giải nghệ phim sex Nhật Bản.</h5>
+                <h5>Truyện hài tiếu lâm tự.</h5>
                 <p>29/11/2020</p>
               </div>
             </div>
@@ -78,13 +47,13 @@
       <section class="news">
         <div class="news-container">
           <a routerLink="/detail-post"><img src="../../../../../assets/images/carousel1.jpg"></a>
-          <p class="carousel-text">Maria ozawa giải nghệ phim sex Nhật Bản.</p>
+          <p class="carousel-text">Truyện hài tiếu lâm tự.</p>
         </div>
       </section>
       <section class="news">
         <div class="news-container">
           <a routerLink="/detail-post"><img src="../../../../../assets/images/carousel2.jpg"></a>
-          <p class="carousel-text">Maria ozawa giải nghệ phim sex Nhật Bản.</p>
+          <p class="carousel-text">Truyện hài tiếu lâm tự.</p>
         </div>
       </section>
     </div>
@@ -93,33 +62,43 @@
       <section class="news">
         <div class="news-container">
           <a routerLink="/detail-post"><img src="../../../../../assets/images/carousel3.jpg"></a>
-          <p class="carousel-text">Maria ozawa giải nghệ phim sex Nhật Bản.</p>
+          <p class="carousel-text">Truyện hài tiếu lâm tự.</p>
         </div>
       </section>
       <section class="news">
         <div class="news-container">
           <a routerLink="/detail-post"><img src="../../../../../assets/images/carousel1.jpg"></a>
-          <p class="carousel-text">Maria ozawa giải nghệ phim sex Nhật Bản.</p>
+          <p class="carousel-text">Truyện hài tiếu lâm tự.</p>
         </div>
       </section>
     </div>
   </article>
+  <!--search-->
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <input id="form-search" type="search" placeholder="Search" aria-label="Search">
+      <input type="button" value="Search" id="search-post">
+    </form>
+  </nav>
+  <!--list post-->
   <section class="more-news">
     <ul class="news-section">
-      <li class="world">
-        <div class="card-post">
-          <h2>Trò chơi hài hước</h2>
-          <a routerLink="/detail-post"><img src="../../../../../assets/images/world1.jpg" class="title-post"></a>
-          <p><span class="label-post">Được đăng bởi:</span> Hoàng Bảo</p>
+      <li class="world" *ngFor="let mylist of myLists">
+        <div class="card-post" >
+          <h2> {{mylist.title}}</h2>
+          <a [routerLink]="['/posts/'+ mylist.id]"><img src="../../../../../assets/images/world1.jpg" class="title-post"></a>
+          <p><span class="label-post">Được đăng bởi:</span> {{mylist.username}}</p>
+          <p><span class="label-post">Ngày đăng:</span> {{mylist.posted_date}}</p>
+          <p><span class="label-post">Trạng thái:</span> {{mylist.status}}</p>
           <p></p>
           <div class="card-button">
-            <a class="up" routerLink="">
+            <a class="up" >
               <img src="../../../../../assets/images/up.png" alt="up">
             </a>
-            <a class="down" routerLink="">
+            <a class="down">
               <img src="../../../../../assets/images/down.png" alt="down">
             </a>
-            <a class="comment" routerLink="">
+            <a class="comment" data-toggle="collapse" href="#{{mylist.id}}" role="button" aria-expanded="false" aria-controls="collapseExample" >
               <img src="../../../../../assets/images/comment.png" alt="comment">
             </a>
             <a type="button" class="more" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
@@ -131,102 +110,7 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </div>
-          <div class="card-comment">
-            <textarea class="user-comment" name="comment" placeholder="Comment here..."></textarea>
-            <input type="submit" value="Enter" name="submit-comment" class="btn btn-dark">
-          </div>
-        </div>
-      </li>
-
-      <li class="world">
-        <div class="card-post">
-          <h2>Trò chơi hài hước</h2>
-          <a routerLink="/detail-post"><img src="../../../../../assets/images/world1.jpg" class="title-post"></a>
-          <p><span class="label-post">Được đăng bởi:</span> Hoàng Bảo</p>
-          <p></p>
-          <div class="card-button">
-            <a class="up" routerLink="">
-              <img src="../../../../../assets/images/up.png" alt="up">
-            </a>
-            <a class="down" routerLink="">
-              <img src="../../../../../assets/images/down.png" alt="down">
-            </a>
-            <a class="comment" routerLink="">
-              <img src="../../../../../assets/images/comment.png" alt="comment">
-            </a>
-            <a type="button" class="more" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-              <img src="../../../../../assets/images//more.png" alt="more">
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
-          <div class="card-comment">
-            <textarea class="user-comment" name="comment" placeholder="Comment here..."></textarea>
-            <input type="submit" value="Enter" name="submit-comment" class="btn btn-dark">
-          </div>
-        </div>
-      </li>
-      <li class="world">
-        <div class="card-post">
-          <h2>Trò chơi hài hước</h2>
-          <a routerLink="/detail-post"><img src="../../../../../assets/images/world1.jpg" class="title-post"></a>
-          <p><span class="label-post">Được đăng bởi:</span> Hoàng Bảo</p>
-          <p></p>
-          <div class="card-button">
-            <a class="up" routerLink="">
-              <img src="../../../../../assets/images/up.png" alt="up">
-            </a>
-            <a class="down" routerLink="">
-              <img src="../../../../../assets/images/down.png" alt="down">
-            </a>
-            <a class="comment" routerLink="">
-              <img src="../../../../../assets/images/comment.png" alt="comment">
-            </a>
-            <a type="button" class="more" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-              <img src="../../../../../assets/images//more.png" alt="more">
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
-          <div class="card-comment">
-            <textarea class="user-comment" name="comment" placeholder="Comment here..."></textarea>
-            <input type="submit" value="Enter" name="submit-comment" class="btn btn-dark">
-          </div>
-
-        </div>
-      </li>
-      <li class="world">
-        <div class="card-post">
-          <h2>Trò chơi hài hước</h2>
-          <a routerLink="/detail-post"><img src="../../../../../assets/images/world1.jpg" class="title-post"></a>
-          <p><span class="label-post">Được đăng bởi:</span> Hoàng Bảo</p>
-          <p></p>
-          <div class="card-button">
-            <a class="up" routerLink="">
-              <img src="../../../../../assets/images/up.png" alt="up">
-            </a>
-            <a class="down" routerLink="">
-              <img src="../../../../../assets/images/down.png" alt="down">
-            </a>
-            <a class="comment" routerLink="">
-              <img src="../../../../../assets/images/comment.png" alt="comment">
-            </a>
-            <a type="button" class="more" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-              <img src="../../../../../assets/images//more.png" alt="more">
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
-          <div class="card-comment">
+          <div class="card-comment collapse" id="{{mylist.id}}">
             <textarea class="user-comment" name="comment" placeholder="Comment here..."></textarea>
             <input type="submit" value="Enter" name="submit-comment" class="btn btn-dark">
           </div>

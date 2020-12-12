@@ -7,17 +7,17 @@ import { DashBoardPostsComponent } from './modules/dash-board-posts/dash-board-p
 import { DetailPostComponent } from './modules/detail-post/detail-post.component';
 import { ForgotPasswordComponent } from './modules/forgot-password/forgot-password.component';
 import { LoginComponent } from './modules/login/login.component';
+import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.component';
 import { RegisterComponent } from './modules/register/register.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/homePage', pathMatch: 'full'},
-
   {path: 'homePage',component: HomePageComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
-  {path: 'detail-post', component: DetailPostComponent},
+  {path: 'posts/:id', component: DetailPostComponent},
 
   {path: 'dashboard',
   component: DashBoardComponent,
@@ -27,6 +27,8 @@ const routes: Routes = [
   },{
    path: 'posts', component: DashBoardPostsComponent
   }]},
+  {path: '404', component: PageNotFoundComponent},
+  {path: '**', redirectTo: '/404'},
 ];
 
 @NgModule({

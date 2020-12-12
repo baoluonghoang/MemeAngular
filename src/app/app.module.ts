@@ -9,7 +9,9 @@ import { HomePageModule } from './layouts/home-page/home-page.module';
 import { DetailPostComponent } from './modules/detail-post/detail-post.component';
 import { ForgotPasswordComponent } from './modules/forgot-password/forgot-password.component';
 import { LoginComponent } from './modules/login/login.component';
+import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.component';
 import { RegisterComponent } from './modules/register/register.component';
+import { Auth } from './helpers/auth.guard.ts/auth.guard.ts.component';
 
 @NgModule({
   declarations: [
@@ -17,16 +19,18 @@ import { RegisterComponent } from './modules/register/register.component';
     LoginComponent,
     RegisterComponent,
     ForgotPasswordComponent,
-    DetailPostComponent
+    DetailPostComponent,
+    PageNotFoundComponent,
+    Auth.Guard.TsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     DashBoardModule,
     HomePageModule,
-    FormsModule,
-    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

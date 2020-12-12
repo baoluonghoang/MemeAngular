@@ -7,23 +7,45 @@
     </div>
     <div class="form-container">
       <div class="form-inner">
-        <form action="#" id="login" [formGroup]="form">
+        <form [formGroup]="form" class="login form-group">
           <div class="field" for="username">
-            <input type="text" name="username" formControlName="username" placeholder="Username" required>
+            <input
+              minlength="5"
+              maxlength="20"
+              ngModel
+              pattern="^[a-zA-Z0-9]+$"
+              formControlName="username"
+              class="form-control"
+              id="username"
+              name="username"
+              type="text"
+              placeholder="Username"
+              required
+            >
           </div>
           <div class="field" for="password">
-            <input type="password" name="password" formControlName="password" placeholder="Password" required>
+            <input
+            minlength="6"
+            ngModel
+            formControlName="password"
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+            >
           </div>
           <div class="pass-link">
             <a routerLink="/forgot-password">Forgot password?</a>
             <a routerLink="/">Return to home page</a>
           </div>
           <div class="field btn">
-            <button class="btn-login" (click)="login()">Login</button>
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login" (click)="login()">
           </div>
-          <div class="signup-link">
-            Not a member? <a routerLink="/register">Signup now</a></div>
         </form>
+           <span> Not a member? <a routerLink="/register" class="btn-router">Signup now</a></span>
       </div>
     </div>
   </div>
