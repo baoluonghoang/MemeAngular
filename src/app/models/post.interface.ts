@@ -28,6 +28,7 @@ export class Account {
   email: string;
   username: string;
   password: any;
+  remember_token: any;
 }
 
 export class Comment {

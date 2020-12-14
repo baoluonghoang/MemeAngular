@@ -51,17 +51,7 @@ body {
   height: 50px;
   width: 100%;
 }
-.form-inner form .field input {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  box-shadow: 1px 1px 1px #fff;
-  padding-left: 15px;
-  border-radius: 5px;
-  border-bottom-width: 2px;
-  font-size: 17px;
-  transition: all 0.3s ease;
-}
+
 
 .form-inner form .field input::placeholder {
   color: #999;
@@ -107,20 +97,6 @@ form .btn .btn-layer {
 form .btn:hover .btn-layer {
   left: 0;
 }
-form .btn input[type="submit"] {
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  position: relative;
-  background: none;
-  border: none;
-  color: #fff;
-  padding-left: 0;
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-}
 
 .form-inner span {
   margin-left: 13%;
@@ -146,15 +122,6 @@ form .btn input[type="submit"] {
   }
 }
 
-/*validate*/
-.form-inner form .field input.ng-touched.ng-valid{
-  border: 2px solid gray;
-}
-
-.form-inner form .field input.ng-touched{
-  border: 2px solid red;
-}
-
-.alert-error {
-  color: red;
+.btn.btn-primary{
+  margin: 20px 0;
 }
