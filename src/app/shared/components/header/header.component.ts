@@ -28,8 +28,8 @@ export class HeaderComponent implements OnInit {
     this.loading = true;
     this.userService.getAll().pipe(first()).subscribe((data: any) => {
       this.loading = false;
-      this.currentUser = data;
-      console.log(data);
+      this.currentUser = data.data;
+      console.log(data.data);
 
     });
 

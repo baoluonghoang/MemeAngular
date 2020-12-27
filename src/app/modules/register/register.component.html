@@ -1,3 +1,10 @@
+<header>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</header>
 <body>
   <div class="wrapper">
     <div class="title-text">
@@ -7,80 +14,53 @@
     </div>
     <div class="form-container">
       <div class="form-inner">
-        <form #regForm="ngForm" class="form-group" name="formRegister" (ngSubmit)="registers(regForm)" novalidate>
+        <form [formGroup]="form" (ngSubmit)="onRegister()">
           <div class="field" for="username">
             <input
-              required
-              minlength="6"
-              maxlength="20"
-              ngModel
-              class="form-control"
-              id="username"
-              #username="ngModel"
-              name="username"
               type="text"
+              formControlName="username"
+              class="form-control"
               placeholder="Username"
+              [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+
             >
-            <div class="alert-error"
-            *ngIf="(username.dirty || username.touched) && username.invalid">
-              <div *ngIf="username.errors.required">
-                Username is required
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is required</div>
               </div>
-              <div *ngIf="username.errors.minlength">
-                Username should be minimum {{username.errors.minlength.requiredLength}}.
-              </div>
-            </div>
           </div>
           <div class="field" for="email">
             <input
-            required
-            maxlength="30"
-            ngModel
-            pattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            type="email"
-            id="email"
-            class="form-control"
-            name="email"
-            #email="ngModel"
-            placeholder="Email Address"
+              type="text"
+              formControlName="email"
+              class="form-control"
+              placeholder="Email"
+              [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+
             >
-            <div class="alert-error"
-            *ngIf="email.touched && !email.valid">
-              <div *ngIf="email.errors.required">
-                Email is required
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
               </div>
-              <div *ngIf="email.errors.maxlength">
-                Email is not valid
-              </div>
-            </div>
           </div>
           <div class="field" for="password">
-            <input
-            required
-            minlength="8"
-            ngModel
-            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
-            type="password"
-            class="form-control"
-            id="password"
-            #password="ngModel"
-            name="password"
-            placeholder="Password" >
-            <div class="alert-error"
-            *ngIf="password.touched && !password.valid">
-              <div *ngIf="password.errors.required">
-                Password is required
+              <input
+              formControlName="password"
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+              >
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
               </div>
-              <div *ngIf="password.errors.pattern">
-                Password have to lowercase, uppercase letters, numbers, special characters, at least 8 characters
-              </div>
-            </div>
           </div>
 
-          <div class="field btn">
-            <div class="btn-layer"></div>
-            <input type="submit" value="Sign Up">
+          <div class="form-froup">
+            <button [disabled]="loading" class="btn btn-primary">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Register
+            </button>
           </div>
+          <br>
         </form>
           <span>If you had an account? <a routerLink="/login" class="btn-return">Cancel</a></span>
       </div>

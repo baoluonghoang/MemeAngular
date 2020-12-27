@@ -1,4 +1,3 @@
-
 <header>
   <div class="website-header">
     <img src="../../../../assets/images/mainLogo.png">
@@ -9,57 +8,59 @@
       <i class="fab fa-google-plus-g"></i>
       <i class="fab fa-instagram"></i>
       <i class="fas fa-rss"></i>
-      <button type="button" class="btn btn-dark" routerLink ="/login">Đăng nhập</button>
-      <button type="button" class="btn btn-dark" routerLink ="/register">Đăng ký</button>
+      <button type="button" class="btn btn-dark" routerLink="/login">Đăng nhập</button>
+      <button type="button" class="btn btn-dark" routerLink="/register">Đăng ký</button>
+    </div>
+    <div class="btn-group" *ngIf="currentUser">
+      <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Hello: {{currentUser.username}}
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item"routerLink="/profileUser" type="button">Profile User</button>
+        <button class="dropdown-item" (click)="logout()" type="button">Logout</button>
+      </div>
     </div>
   </div>
   <nav class="navbar navbar-expand-md ">
-<!-- Brand -->
+    <!-- Brand -->
 
 
-<!-- Toggler/collapsibe Button -->
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-<span class="navbar-toggler-icon"></span>
-</button>
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<!-- Navbar links -->
-<div class="collapse navbar-collapse" id="collapsibleNavbar">
-<ul class="navbar-nav">
-  <li class="nav-item">
-    <a class="nav-link" routerlink="#">Trang chủ</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerlink="#">HOT</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerlink="#">Truyện cười</a>
-  </li>
-<li class="nav-item">
-    <a class="nav-link" routerlink="#">Võ thuật</a>
-  </li>
-  <li class="nav-item">
-    <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
-    <div *ngIf="currentUser">
-      <li>Hello: {{currentUser.username}}</li>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerlink="#">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerlink="#">HOT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerlink="#">Truyện cười</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerlink="#">Võ thuật</a>
+        </li>
+      </ul>
     </div>
-</li>
-<li class="nav-item">
-
-  <div *ngIf="currentUser">
-    <a class="nav-item nav-link" (click)="logout()">Logout</a>
-  </div>
-</li>
-</ul>
-</div>
   </nav>
   <div class="breaking-news-section">
     <span id="btext">Bài đăng hot</span>
     <marquee direction="left">
       <a routerlink="#" class="breaking-news">
         <p class="bntime">23 04 2020</p>
-        Những tin tức hài hước nhất về Trump</a>
-      <a routerlink="#" class="breaking-news"><p class="bntime">29 11 2020</p>Kịch tấu của Hoài Linh.</a>
-      <a routerlink="#" class="breaking-news"><p class="bntime">23 12 2020</p>Bộ truyện cười hài hước nhất được phát hành</a>
+        Những tin tức hài hước nhất về Trump
+      </a>
+      <a routerlink="#" class="breaking-news">
+        <p class="bntime">29 11 2020</p>Kịch tấu của Hoài Linh.
+      </a>
+      <a routerlink="#" class="breaking-news">
+        <p class="bntime">23 12 2020</p>Bộ truyện cười hài hước nhất được phát hành
+      </a>
     </marquee>
   </div>
 </header>

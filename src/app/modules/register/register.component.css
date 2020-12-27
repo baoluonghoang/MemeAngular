@@ -153,20 +153,3 @@ form .btn input[type="submit"] {
 .btn-return:hover{
   border-bottom: 1px solid #000000;
 }
-
-/*validate*/
-.form-inner form .field input.ng-touched.ng-valid{
-  border: 2px solid gray;
-}
-
-.form-inner form .field input.ng-touched{
-  border: 2px solid red;
-}
-
-.form-inner form .field:last-child{
-  margin: 45px 0;
-}
-
-.alert-error {
-  color: red;
-}

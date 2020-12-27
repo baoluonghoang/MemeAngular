@@ -1,0 +1,68 @@
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+      <h2 class="h3 mb-4 page-title">Settings</h2>
+      <div class="my-4">
+        <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+              aria-selected="false">Profile user</a>
+          </li>
+        </ul>
+        <form>
+          <div class="row mt-5 align-items-center">
+            <div class="col-md-3 text-center mb-5">
+              <div class="avatar avatar-xl">
+                <img src="./images/avatar.jpg" alt="..." class="avatar-img rounded-circle" />
+              </div>
+            </div>
+            <div class="col">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h4 class="mb-1">User, Alice</h4>
+                  <p class="small mb-3"><span class="badge badge-dark">Da Nang, Viet Nam</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4" />
+
+          <div class="form-group">
+            <label for="inputUsername">Username</label>
+            <input type="text" class="form-control" id="inputUsername" placeholder="Lương Hoàng Bảo" />
+          </div>
+          <div class="form-group">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="jenny@gmail.com" disabled/>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress5">Address</label>
+            <input type="text" class="form-control" id="inputAddress5" placeholder="345 Điện Biên Phủ, Đà Nẵng" />
+          </div>
+
+          <hr class="my-4" />
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="inputPassword4">Old password</label>
+                <input type="password" class="form-control" id="inputPassword5" />
+              </div>
+              <div class="form-group">
+                <label for="inputPassword5">New password</label>
+                <input type="password" class="form-control" id="inputPassword5" />
+              </div>
+              <div class="form-group">
+                <label for="inputPassword6">Identify password</label>
+                <input type="password" class="form-control" id="inputPassword6" />
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Update</button>
+          <button type="submit" routerLink="/" class="btn btn-success">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -52,6 +52,7 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
+          // localStorage.setItem('currentUser', data.access_token);
           this.router.navigate([this.returnUrl]);
         }
       ),

@@ -9,6 +9,8 @@ import { DetailPostComponent } from './modules/detail-post/detail-post.component
 import { ForgotPasswordComponent } from './modules/forgot-password/forgot-password.component';
 import { LoginComponent } from './modules/login/login.component';
 import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.component';
+import { PostUserComponent } from './modules/post-user/post-user.component';
+import { ProfileUserComponent } from './modules/profile-user/profile-user.component';
 import { RegisterComponent } from './modules/register/register.component';
 
 
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'posts/:id', component: DetailPostComponent},
+  {path: 'profileUser', component: ProfileUserComponent},
+  {path: 'postUser', component: PostUserComponent},
 
   {path: 'dashboard',
   component: DashBoardComponent,

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -11,7 +11,7 @@ export class AuthenticationService {
   private currentUserSubject: BehaviorSubject<Account>;
   public currentUser: Observable<Account>;
 
-  urlApi = 'http://127.0.0.1:8000/api';
+  readonly urlApi = 'http://127.0.0.1:8000/api';
 
   constructor(private http: HttpClient) {
     this.currentUserSubject = new BehaviorSubject<Account>(JSON.parse(localStorage.getItem('currentUser')));

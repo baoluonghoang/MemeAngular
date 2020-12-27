@@ -27,7 +27,7 @@ export class User {
 export class Account {
   email: string;
   username: string;
-  password: any;
+  password: string;
   remember_token: any;
 }
 

@@ -12,6 +12,8 @@ import { DetailPostComponent } from './modules/detail-post/detail-post.component
 import { ForgotPasswordComponent } from './modules/forgot-password/forgot-password.component';
 import { LoginComponent } from './modules/login/login.component';
 import { RegisterComponent } from './modules/register/register.component';
+import { PostUserComponent } from './modules/post-user/post-user.component';
+import { ProfileUserComponent } from './modules/profile-user/profile-user.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { RegisterComponent } from './modules/register/register.component';
     RegisterComponent,
     ForgotPasswordComponent,
     DetailPostComponent,
+    PostUserComponent,
+    ProfileUserComponent,
   ],
   imports: [
     BrowserModule,

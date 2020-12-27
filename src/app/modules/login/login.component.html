@@ -24,25 +24,28 @@
               [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
 
             >
-            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-              <div *ngIf="f.username.errors.required">Username is required</div>
-          </div>
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is required</div>
+              </div>
           </div>
           <div class="field" for="password">
-            <input
-            formControlName="password"
-            type="password"
-            class="form-control"
-            placeholder="Password"
-            [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
-            >
-            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-              <div *ngIf="f.password.errors.required">Password is required</div>
-          </div>
+              <input
+              formControlName="password"
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+              >
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+              </div>
           </div>
           <div class="pass-link">
+            <label>
+              <input type="checkbox" />
+              <span>Remember</span>
+            </label>
             <a routerLink="/forgot-password">Forgot password?</a>
-            <a routerLink="/">Return to home page</a>
           </div>
           <button [disabled]="loading" class="btn btn-primary">
             <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>

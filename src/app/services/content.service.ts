@@ -7,7 +7,7 @@ import { Account, Category, Post, User} from '../models/post.interface';
   providedIn: 'root'
 })
 export class ContentService {
-  urlApi = 'http://127.0.0.1:8000/api';
+  readonly urlApi = 'http://127.0.0.1:8000/api';
 
   constructor(private http: HttpClient) { }
 
