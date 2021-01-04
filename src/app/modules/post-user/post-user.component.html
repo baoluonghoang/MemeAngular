@@ -1,5 +1,74 @@
+<header>
+  <div class="website-header">
+    <img src="../../../../assets/images/mainLogo.png">
+    <h1>Meme Website</h1>
+    <div class="social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-google-plus-g"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fas fa-rss"></i>
+      <button type="button" class="btn btn-dark" routerLink="/login">Đăng nhập</button>
+      <button type="button" class="btn btn-dark" routerLink="/register">Đăng ký</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="https://graph.facebook.com/1530271143788664/picture?width=30&height=30" class="cimg" alt="img">
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item"routerLink="/profileUser" type="button">Profile User</button>
+        <button class="dropdown-item"routerLink="/postUser" type="button">Post User</button>
+        <button class="dropdown-item" routerLink="/" type="button">Logout</button>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-md ">
+    <!-- Brand -->
+
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerlink="#">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerlink="#">HOT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerlink="#">Truyện cười</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerlink="#">Võ thuật</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="breaking-news-section">
+    <span id="btext">Bài đăng hot</span>
+    <marquee direction="left">
+      <a routerlink="#" class="breaking-news">
+        <p class="bntime">23 04 2020</p>
+        Những tin tức hài hước nhất về Trump
+      </a>
+      <a routerlink="#" class="breaking-news">
+        <p class="bntime">29 11 2020</p>Kịch tấu của Hoài Linh.
+      </a>
+      <a routerlink="#" class="breaking-news">
+        <p class="bntime">23 12 2020</p>Bộ truyện cười hài hước nhất được phát hành
+      </a>
+    </marquee>
+  </div>
+</header>
+
+
 <div class="container">
-	<div class="row">
+	<div class="row row-sh">
 
 	    <div class="col-md-8 col-md-offset-2">
 
@@ -30,7 +99,7 @@
     		        <button type="submit" class="btn btn-primary">
     		            Tạo
     		        </button>
-    		        <button class="btn btn-default">
+    		        <button class="btn btn-default" routerLink="/">
     		            Hủy
     		        </button>
     		    </div>
@@ -39,3 +108,75 @@
 
 	</div>
 </div>
+
+
+<!--footer-->
+<div class="advertise">
+  <img src="../../../../assets/images/advertise.jpeg" alt="Web Hosting" class="advertise-img">
+</div>
+
+<footer id="footer">
+  <div class="list-service container">
+    <div class="first-service">
+      <div class="support">
+        <label class="label-service">Về chúng tôi</label>
+        <ul class="ul-service">
+          <li class="li-service"><a href="#" class="a-service">Bản đồ</a></li>
+          <li class="li-service"><a href="#" class="a-service">Chính sách</a></li>
+          <li class="li-service"><a href="#" class="a-service">Ưu đãi</a></li>
+          <li class="li-service"><a href="#" class="a-service">Điều khoản và luật lệ</a></li>
+          <li class="li-service"><a href="#" class="a-service">Liên lạc</a></li>
+        </ul>
+      </div>
+      <div class="support">
+        <label class="label-service">Hỗ trợ</label>
+        <ul class="ul-service">
+          <li class="li-service"><a href="#" class="a-service">Bản đồ</a></li>
+          <li class="li-service"><a href="#" class="a-service">Chính sách</a></li>
+          <li class="li-service"><a href="#" class="a-service">Ưu đãi</a></li>
+          <li class="li-service"><a href="#" class="a-service">Điều khoản và luật lệ</a></li>
+          <li class="li-service"><a href="#" class="a-service">Liên lạc</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="second-service">
+      <div class="service">
+        <a class="label-service">Dịch vụ</a>
+        <ul class="ul-service">
+          <li class="li-service"><a href="#" class="a-service">Bản đồ</a></li>
+          <li class="li-service"><a href="#" class="a-service">Chính sách</a></li>
+          <li class="li-service"><a href="#" class="a-service">Ưu đãi</a></li>
+          <li class="li-service"><a href="#" class="a-service">Điều khoản và luật lệ</a></li>
+          <li class="li-service"><a href="#" class="a-service">Liên lạc</a></li>
+        </ul>
+      </div>
+      <div class="information">
+        <a class="label-service">Thông tin</a>
+        <ul class="ul-service">
+          <li class="li-service"><a href="#" class="a-service">Bản đồ</a></li>
+          <li class="li-service"><a href="#" class="a-service">Chính sách</a></li>
+          <li class="li-service"><a href="#" class="a-service">Ưu đãi</a></li>
+          <li class="li-service"><a href="#" class="a-service">Điều khoản và luật lệ</a></li>
+          <li class="li-service"><a href="#" class="a-service">Liên lạc</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="detail-us">
+    <div class="text">
+      <a class="title-link">Về chúng tôi </a>&nbsp;<a class="title-link">Dịch vụ khách hàng </a>&nbsp;<a
+        class="title-link">Chính sách </a><a> 2020 web thời trang. Được làm bởi Hoàng Bảo </a>
+      <br>
+      <a class="link">Bản đồ</a> | <a class="link">Điều khoản</a> |
+      <a class="link">Tìm kiếm nhanh</a> | <a class="link">Đặt hàng nhanh</a> | <a class="link">Liên hệ
+        chúng tôi</a>
+    </div>
+    <div class="social">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-google-plus-g"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fas fa-rss"></i>
+    </div>
+  </div>
+</footer>

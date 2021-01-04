@@ -21,14 +21,7 @@ export class Category {
 export class User {
   username: string;
   status: boolean;
-  role: boolean;
-}
-
-export class Account {
-  email: string;
-  username: string;
-  password: string;
-  remember_token: any;
+  role: string;
 }
 
 export class Comment {

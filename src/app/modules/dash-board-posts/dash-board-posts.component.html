@@ -1,43 +1,33 @@
 <h1 style="text-align: center;">List of posts information</h1>
-<table class="table">
+<table class="table" border="1">
   <thead>
     <tr>
       <th scope="col">STT</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Title</th>
+      <th scope="col">Posted_date</th>
+      <th scope="col">vote_up</th>
+      <th scope="col">vote_down</th>
+      <th scope="col">status</th>
+      <th scope="col">username</th>
+      <th scope="col">created_at</th>
+      <th scope="col">updated_at</th>
       <th scope="col">Edit</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+    <tr *ngFor="let mylist of myLists">
+      <th scope="row">{{mylist.id}}</th>
+      <td>{{mylist.title}}</td>
+      <td>{{mylist.posted_date}}</td>
+      <td>{{mylist.vote_up}}</td>
+      <td>{{mylist.vote_down}}</td>
+      <td>{{mylist.status}}</td>
+      <td>{{mylist.username}}</td>
+      <td>{{mylist.created_at}}</td>
+      <td>{{mylist.updated_at}}</td>
       <td>
-        <button type="button" class="btn btn-success">Edit</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>
-        <button type="button" class="btn btn-success">Edit</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>
-        <button type="button" class="btn btn-success">Edit</button>
-        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-success">Update</button>
+        <button type="button" class="btn btn-danger">Delete</button>
       </td>
     </tr>
   </tbody>

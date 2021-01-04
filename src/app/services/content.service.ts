@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Account, Category, Post, User} from '../models/post.interface';
+import { Category, Post, User} from '../models/post.interface';
+import { Account } from 'src/app/models/users.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -44,20 +45,20 @@ export class ContentService {
 
   /*-----------USERS-----------*/
 
-  getAllUser(): Observable<User> {
-    return this.http.get<User>(`${this.urlApi}/users`);
+  getAllUser() {
+    return this.http.get<Account[]>(`${this.urlApi}/users`);
   }
 
-  getUser(id: number): Observable<User> {
-    return this.http.get<User>(`${this.urlApi}/users/${id}`);
+  getUserById(id: number){
+    return this.http.get<Account>(`${this.urlApi}/users/${id}`);
   }
 
-  editUser(id: number) : Observable<User> {
-    return this.http.patch<User>(`${this.urlApi}/users/${id}`, id);
+  editUser(id: number) : Observable<Account> {
+    return this.http.patch<Account>(`${this.urlApi}/users/${id}`, id);
   }
 
-  deleteUser(id: number) :Observable<User> {
-    return this.http.delete<User>(`${this.urlApi}/users/${id}`);
+  deleteUser(id: number) :Observable<Account> {
+    return this.http.delete<Account>(`${this.urlApi}/users/${id}`);
   }
 
 }

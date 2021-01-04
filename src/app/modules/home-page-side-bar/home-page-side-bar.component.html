@@ -1,52 +1,12 @@
-<div class="side-bar">
-  <div class="menu-search">
-    <input id="text" type="text" placeholder="Tra cứu bài đăng" name="" />
-    <input type="button" id="search" />
-  </div>
-  <div class="categories">
-    <label class="label">Các thể loại </label>
-    <ul class="list-categories">
-      <li class="list-category">
-        <a class="href-category" href="#"></a>
-        <span id="view">1000</span>
-        <img src="../../../assets/images/view.png" alt="">
-      </li>
-    </ul>
-  </div>
-  <div class="get-in-touch">
-    <span>Liên hệ với chúng tôi !</span>
-    <div class="icon-social">
-      <img src="../../../assets/images/img-social1.png" alt="social1" id="social-img">
-      <img src="../../../assets/images/img-social2.png" alt="social2" id="social-img">
-      <img src="../../../assets/images/img-social3.png" alt="social3" id="social-img">
-      <img src="../../../assets/images/img-social4.png" alt="social4" id="social-img">
-    </div>
-  </div>
-  <div class="list-cart">
-    <span>Bài đăng nổi bật</span>
-    <div class="cart">
-      <div class="thumbnail">
-        <img class="thumb-img" src="../../../assets/images/card1.jpg" alt="">
-      </div>
-      <div class="info">
-        <h3> :v lạc quan lên :)) :d </h3>
-        <div class="stats">
-          <img src="../../../assets/images/view.png" alt="">
-          <span title="Lượt xem" class="views">1639</span>
-        </div>
+<aside>
+  <h4>Các thể loại nổi bật</h4>
+  <ul class="ul-recent" *ngFor="let myCategory of myCategories">
+    <div class="recent-news">
+      <div class="divide-sidebar">
+        <span>{{myCategory.id}}</span>
+        <img src="../../../../../assets/images/article1.jpg">
+        <p>{{myCategory.name}}</p>
       </div>
     </div>
-    <div class="cart">
-      <div class="thumbnail">
-        <img class="thumb-img" src="../../../assets/images/card1.jpg" alt="">
-      </div>
-      <div class="info">
-        <h3> :v lạc quan lên :)) :d </h3>
-        <div class="stats">
-          <img src="../../../assets/images/view.png" alt="">
-          <span title="Lượt xem" class="views">1639</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  </ul>
+</aside>

@@ -1,0 +1,36 @@
+<div class="card mt-4">
+  <h4 class="card-header">Admin</h4>
+  <div class="card-body">
+      <p>This page can be accessed <u>only by administrators</u>.</p>
+      <p class="mb-1">All users from secure (admin only) api end point:</p>
+      <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+      <ul *ngIf="accounts">
+          <li *ngFor="let account of accounts">{{account.username}} {{account.email}} {{account.role}}</li>
+      </ul>
+  </div>
+</div>
+
+<h1 style="text-align: center;">List of categories information</h1>
+<table class="table" border="1">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">created_at</th>
+      <th scope="col">updated_at</th>
+      <th scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let myCategory of myCategories">
+      <th scope="row">{{myCategory.id}}</th>
+      <td>{{myCategory.name}}</td>
+      <td>{{myCategory.created_at}}</td>
+      <td>@{{myCategory.updated_at}}</td>
+      <td>
+        <button type="button" class="btn btn-success">Update</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

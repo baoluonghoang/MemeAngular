@@ -1,4 +1,5 @@
 # MemeAngular
+<!-- Em làm được chức năng đăng nhập, đăng ký, show tất cả Api( các bài post, các thể loại nhưng chưa thể CRUD do phân quyền ADMIN chưa được ạ ! ) -->
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 

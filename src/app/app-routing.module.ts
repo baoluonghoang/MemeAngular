@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './helpers/auth.guard';
 import { DashBoardComponent } from './layouts/dash-board/dash-board.component';
 import { HomePageComponent } from './layouts/home-page/home-page.component';
-import { DashBoardListUserComponent } from './modules/dash-board-list-user/dash-board-list-user.component';
+import { DashBoardListUserComponent } from './modules/dash-board-list-category/dash-board-list-user.component';
 import { DashBoardPostsComponent } from './modules/dash-board-posts/dash-board-posts.component';
 import { DetailPostComponent } from './modules/detail-post/detail-post.component';
 import { ForgotPasswordComponent } from './modules/forgot-password/forgot-password.component';
@@ -16,7 +16,7 @@ import { RegisterComponent } from './modules/register/register.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/homePage', pathMatch: 'full'},
-  {path: 'homePage', component: HomePageComponent, canActivate: [AuthGuard]},
+  {path: 'homePage', component: HomePageComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'postUser', component: PostUserComponent},
 
   {path: 'dashboard',
-  component: DashBoardComponent,
+  component: DashBoardComponent, canActivate: [AuthGuard],
   children: [
     {
      path: 'list-user', component: DashBoardListUserComponent

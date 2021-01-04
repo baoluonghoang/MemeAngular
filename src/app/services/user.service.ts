@@ -1,7 +1,8 @@
+import { User } from 'src/app/models/post.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Account, User } from 'src/app/models/post.interface';
+import { Account } from 'src/app/models/users.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +14,5 @@ export class UserService {
 
   registerAccount(account: Account) : Observable<Account> {
     return this.http.post<Account>(`${this.urlApi}/accounts`, account);
-  }
-
-  getAll() : Observable<User> {
-    return this.http.get<User>(`${this.urlApi}/users`);
   }
 }
